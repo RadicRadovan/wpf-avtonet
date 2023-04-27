@@ -18,10 +18,11 @@ namespace Sklop1
         {
         }
 
-        public Oglas(string naziv, string znamka)
+        public Oglas(string naziv, string znamka, string tipAvta)
         {
             this.nazivAvta = naziv;
             this.znamka = znamka;
+            this.tipAvta = tipAvta;
         }
 
         public string NazivAvta
@@ -53,7 +54,7 @@ namespace Sklop1
                 else
                 {
                     slika = value;
-                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(slika));
                 }
             }
         }
@@ -124,6 +125,11 @@ namespace Sklop1
                     OnPropertyChanged();
                 }
             }
+        }
+
+        public bool HaveImage
+        {
+            get { return !string.IsNullOrEmpty(slika); }
         }
 
         public override string ToString()
