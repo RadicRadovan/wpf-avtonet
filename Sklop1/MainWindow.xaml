@@ -74,16 +74,47 @@
                           SelectedItem="{Binding Path=Izbran}"
                           SelectionMode="Single"
                           Margin="0,0,0,40">
-                    <!--   <ListView.View> -->
-                    <!-- <GridView> -->
-                    <!--     <GridViewColumn Header="Naziv: "  DisplayMemberBinding="{Binding Path=NazivAvta}"/> -->
-                    <!--       <GridViewColumn Header="Znamka: "  DisplayMemberBinding="{Binding Path=Znamka}"/> -->
-                    <!-- </GridView> -->
-                    <!-- </ListView.View> -->
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Grid.Column="1" Orientation="Horizontal">
-                                <Image Source="{Binding Slika}" MaxHeight="50" MaxWidth="50" Margin="5 5 5 5 "></Image>
+                            <!-- <DataTemplate.Triggers> -->
+                            <!--     <DataTrigger Value="False" Binding="{Binding HaveImage}"> -->
+                            <!--         <Setter TargetName="Slika" Property="Source" Value="/logo.png"/> -->
+                            <!--     </DataTrigger> -->
+                            <!-- </DataTemplate.Triggers> -->
+                            <StackPanel Orientation="Horizontal">
+                                <!-- <Image Source="{Binding Slika}" MaxHeight="50" MaxWidth="50" Margin="5 5 5 5 "></Image> -->
+                                <Image MaxHeight="50" MaxWidth="50">
+                                    <Image.Style>
+                                        <Style TargetType="{x:Type Image}">
+                                            <Setter Property="Source" Value="{Binding Slika}" />
+                                            <Style.Triggers>
+                                                <!-- <DataTrigger Value="True" Binding="{Binding HaveImage}"> -->
+                                                <!-- <Setter Property="Source" Value="{Binding Slika}"/> -->
+                                                <!-- </DataTrigger> -->
+                                                <!-- <DataTrigger Value="False" Binding="{Binding HaveImage}"> -->
+                                                <!-- <DataTrigger Value="Kamion" Binding="{Binding TipAvta}"> -->
+                                                <!--      -->
+                                                <!-- </DataTrigger> -->
+                                                <!-- <Setter Property="Source" Value="/logo.png"/> -->
+                                                <!-- </DataTrigger> -->
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding Path=HaveImage}" Value="False" />
+                                                        <Condition Binding="{Binding Path=TipAvta}" Value="limuzina" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="/logo.png"/>
+                                                </MultiDataTrigger>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding Path=HaveImage}" Value="False" />
+                                                        <Condition Binding="{Binding Path=TipAvta}" Value="karavan" />
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Source" Value="/search.png"/>
+                                                </MultiDataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
                                 <Label Content="{Binding NazivAvta}" Margin="5 5 5 5 "></Label>
                                 <TextBlock Text="{Binding Znamka}" Margin="5 12 5 5 "></TextBlock>
                             </StackPanel>

@@ -4,7 +4,21 @@
     <projectFile>Sklop1/Sklop1.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36002821-f083-4c92-8250-3c5facd00ac4" name="Changes" comment="" />
+    <list default="true" id="36002821-f083-4c92-8250-3c5facd00ac4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sklop1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sklop1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/Oglas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/Oglas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/bin/Debug/Sklop1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/bin/Debug/Sklop1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/bin/Debug/Sklop1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/bin/Debug/Sklop1.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +33,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NWggH6J5DlivyRpa7Lje5EYfQy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -68,48 +83,32 @@
       <workItem from="1682520821865" duration="1516000" />
       <workItem from="1682537522754" duration="4339000" />
       <workItem from="1682542422681" duration="1579000" />
-      <workItem from="1682590792027" duration="537000" />
+      <workItem from="1682590792027" duration="1739000" />
+      <workItem from="1682596044429" duration="437000" />
+      <workItem from="1682596533452" duration="4320000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Sklop1/ViewModel.cs</url>
-          <line>136</line>
-          <properties documentPath="D:\Sklop1\Sklop1\Sklop1\ViewModel.cs" initialLine="136" containingFunctionPresentation="method 'UpdateCar'">
-            <startOffsets>
-              <option value="3567" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3615" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Sklop1/ViewModel.cs</url>
-          <line>142</line>
-          <properties documentPath="D:\Sklop1\Sklop1\Sklop1\ViewModel.cs" initialLine="142" containingFunctionPresentation="method 'UpdateCar'">
-            <startOffsets>
-              <option value="3810" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3839" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Sklop1.SettingsWindow" memberName="Znamke" />
