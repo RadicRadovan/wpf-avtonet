@@ -1,6 +1,11 @@
 ﻿using System;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Xml.Serialization;
+using Microsoft.Win32;
 
 namespace Sklop1
 {
@@ -14,9 +19,9 @@ namespace Sklop1
             InitializeComponent();
             ViewModel vm = ViewModel.getInstance();
             this.DataContext = vm;
-            vm.oglasi.Add(new Oglas("Tamic oglas", "TAM", "limuzina"));
-            vm.oglasi.Add(new Oglas("Lada niva", "LADA","limuzina"));
-            vm.oglasi.Add(new Oglas("Yugo 45", "Zastava","karavan"));
+            // vm.oglasi.Add(new Oglas("Tamic oglas", "TAM", "limuzina"));
+            // vm.oglasi.Add(new Oglas("Lada niva", "LADA","limuzina"));
+            // vm.oglasi.Add(new Oglas("Yugo 45", "Zastava","karavan"));
             LV1.MouseDoubleClick += new MouseButtonEventHandler(PrikaziItem);
             LV1.Items.Refresh();
         }
@@ -57,6 +62,72 @@ namespace Sklop1
             AddWindow addWindow = new AddWindow();
             addWindow.ShowDialog();
         }
-        
+
+        private void Uvozi(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog()
+            {
+                InitialDirectory = @"D:\",
+                Title = "Browse Text Files",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = ".xml",
+                Filter ="Images (*.xml," + "All files (*.*)|*.*",
+                FilterIndex = 2,
+                RestoreDirectory = true,
+
+                ReadOnlyChecked = true,
+                ShowReadOnly = true
+            };
+            openFileDialog.ShowDialog();
+            var vm = this.DataContext as ViewModel;
+            if (!string.IsNullOrEmpty(openFileDialog.FileName))
+            {
+                using (StreamReader sr = new StreamReader(openFileDialog.FileName))
+                {
+                    try
+                    {
+                        XmlSerializer xml = new XmlSerializer(vm.Oglasi.GetType());
+                        ObservableCollection<Oglas> oglasi = (ObservableCollection<Oglas>)xml.Deserialize(sr);
+                        if (oglasi != null)
+                        {
+                            vm.Oglasi = oglasi;
+                        }
+
+                        LV1.Items.Refresh();
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show("PODATKI NISO KOMPATIBILNI: " + exception.Message);
+                    }
+                    finally
+                    {
+                        vm.Oglasi = new ObservableCollection<Oglas>();
+                    }
+
+                }
+            }
+        }
+
+        private void Izvozi(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "XML file (*.xml)|*.xml";
+            saveFileDialog.InitialDirectory = @"D:\";
+            saveFileDialog.Title = "Save a XML File";
+            saveFileDialog.ShowDialog();
+            var vm = this.DataContext as ViewModel;
+            var name = saveFileDialog.FileName;
+            if (!string.IsNullOrEmpty(saveFileDialog.FileName))
+            {
+                using (StreamWriter sw = new StreamWriter(name))
+                {
+                    XmlSerializer xml = new XmlSerializer(vm.Oglasi.GetType());
+                    xml.Serialize(sw, vm.oglasi);
+                }   
+            }
+        }
     }
 }

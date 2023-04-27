@@ -25,6 +25,8 @@
                         <!-- <MenuItem Header="Ured"  Command="{Binding Path=UpdateItem}"></MenuItem> -->
                     </MenuItem>
                     <MenuItem Header="Datoteka" Foreground="Black" FontSize="16">
+                        <MenuItem Header="Uvozi" Click="Uvozi"></MenuItem>
+                        <MenuItem Header="Izvozi" Click="Izvozi"></MenuItem>
                         <MenuItem Header="Izhod" Click="Izhod"></MenuItem>
                     </MenuItem>
                     <MenuItem Header="Oglasi" Foreground="Black" FontSize="16">
@@ -33,7 +35,7 @@
                 </Menu>
             </StackPanel>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0 0 0 5" Height="92">
-                <Image Margin="50 10 5 5" Height="60" Width="70" Source="/logo.png" />
+                <Image Margin="50 10 5 5" Height="60" Width="70" Source="/logo.png" RenderTransformOrigin="0.571,0.5" />
                 <Border
                     BorderBrush="Black"
                     BorderThickness="2"
@@ -88,28 +90,28 @@
                                         <Style TargetType="{x:Type Image}">
                                             <Setter Property="Source" Value="{Binding Slika}" />
                                             <Style.Triggers>
-                                                <!-- <DataTrigger Value="True" Binding="{Binding HaveImage}"> -->
-                                                <!-- <Setter Property="Source" Value="{Binding Slika}"/> -->
+                                                <DataTrigger Value="True" Binding="{Binding HaveImage}">
+                                                <Setter Property="Source" Value="{Binding Slika}"/>
+                                                </DataTrigger>
+                                                <!-- <DataTrigger Value="False" Binding="{Binding HaveImage}"> -->
+                                                <!--     <Setter Property="Source" Value="/logo.png"/> -->
                                                 <!-- </DataTrigger> -->
                                                 <!-- <DataTrigger Value="False" Binding="{Binding HaveImage}"> -->
-                                                <!-- <DataTrigger Value="Kamion" Binding="{Binding TipAvta}"> -->
-                                                <!--      -->
-                                                <!-- </DataTrigger> -->
-                                                <!-- <Setter Property="Source" Value="/logo.png"/> -->
+                                                <!--     <Setter Property="Source" Value="/logo.png"/> -->
                                                 <!-- </DataTrigger> -->
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Path=HaveImage}" Value="False" />
                                                         <Condition Binding="{Binding Path=TipAvta}" Value="limuzina" />
                                                     </MultiDataTrigger.Conditions>
-                                                    <Setter Property="Source" Value="/logo.png"/>
+                                                    <Setter Property="Source" Value="/car.png"/>
                                                 </MultiDataTrigger>
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Path=HaveImage}" Value="False" />
                                                         <Condition Binding="{Binding Path=TipAvta}" Value="karavan" />
                                                     </MultiDataTrigger.Conditions>
-                                                    <Setter Property="Source" Value="/search.png"/>
+                                                    <Setter Property="Source" Value="/trailer.png"/>
                                                 </MultiDataTrigger>
                                             </Style.Triggers>
                                         </Style>

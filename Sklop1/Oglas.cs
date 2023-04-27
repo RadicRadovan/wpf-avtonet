@@ -18,7 +18,7 @@ namespace Sklop1
         {
         }
 
-        public Oglas(string naziv, string znamka, string tipAvta)
+        public Oglas(string naziv, string znamka, string tipAvta = "limuzina")
         {
             this.nazivAvta = naziv;
             this.znamka = znamka;
