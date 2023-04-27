@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sklop1", "Sklop1\Sklop1.csproj", "{A391B4CE-D7B3-4B64-88AA-D8B0BEDE9939}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A391B4CE-D7B3-4B64-88AA-D8B0BEDE9939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A391B4CE-D7B3-4B64-88AA-D8B0BEDE9939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A391B4CE-D7B3-4B64-88AA-D8B0BEDE9939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A391B4CE-D7B3-4B64-88AA-D8B0BEDE9939}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FC1D291-A5DA-4B4F-AE8E-6474634ACB25}
+	EndGlobalSection
+EndGlobal
