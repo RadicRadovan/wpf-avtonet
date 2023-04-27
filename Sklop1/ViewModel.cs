@@ -27,7 +27,14 @@ namespace Sklop1
         public ObservableCollection<Oglas> Oglasi
         {
             get { return oglasi; }
-            set { oglasi = value; }
+            set
+            {
+                if(oglasi!= value)
+                {
+                    oglasi = value;
+                    OnPropertyChange(nameof(oglasi));
+                }
+            }
         }
 
         private ViewModel()
@@ -111,6 +118,7 @@ namespace Sklop1
                 return;
             }
 
+            izbran.TipAvta = "limuzina";
             Oglasi.Add(izbran);
             OnPropertyChange(nameof(Oglasi));
         }

@@ -121,5 +121,11 @@
   <ItemGroup>
     <Folder Include="assets\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="trailer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
