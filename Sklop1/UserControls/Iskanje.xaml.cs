@@ -28,18 +28,10 @@ namespace Sklop1.UserControls
                 var oglasi = ViewModel.getInstance().Oglasi; 
                 return (((Oglas)item).NazivAvta.IndexOf(iskanjeText.Text, StringComparison.OrdinalIgnoreCase) >= 0);
             }
-
-            // foreach (var oglas in ViewModel.getInstance().Oglasi)
-            // {
-            //     if (oglas.NazivAvta != iskanjeText.Text)
-            //     {
-            //         ViewModel.getInstance().Oglasi.Remove(oglas);
-            //     }
-            // }
-            //
         }
         public void OnTextChange (object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
+            CollectionViewSource.GetDefaultView(ViewModel.getInstance().Oglasi).Filter = isci;
             CollectionViewSource.GetDefaultView(ViewModel.getInstance().Oglasi).Refresh();
         }
     }

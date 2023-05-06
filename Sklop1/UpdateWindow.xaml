@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Sklop1"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="UpdateWindow"  Height="300" Width="300">
+        Title="UpdateWindow"  Height="400" Width="300">
     <Grid>
         <StackPanel HorizontalAlignment="Center">
             <Label>Naziv</Label>
@@ -18,10 +18,25 @@
                 Width="250" HorizontalAlignment="Left">
             </ComboBox> 
             <Label>Slika</Label>
-            <TextBlock  Text="{Binding Path=Izbran.Slika}"/>
+            <TextBlock  Text="{Binding Path=SlikaDodana}"/>
+            <Label>Pogon</Label>
+            <ComboBox
+                ItemsSource="{Binding Path=VsiPogoni}"
+                SelectedValue="{Binding Path=PogonDodan}"
+                Width="250" HorizontalAlignment="Left">
+            </ComboBox> 
+            <Label>Tip</Label>
+            <ComboBox
+                ItemsSource="{Binding Path=VsiTipi}"
+                SelectedValue="{Binding Path=TipDodan}"
+                Width="250" HorizontalAlignment="Left">
+            </ComboBox> 
+            <Label>Kategorija</Label>
+            <TextBox Text="{Binding Path=KategorijaDodana}" Width="250"/>
             <Button Click="addImage" Width="150" Margin="5 15 15 5 ">Izberi sliko</Button>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Click="update" Width="100" Margin="5 15 15 5 ">Update</Button>
+                <Button Click="cancel" Width="100" Margin="5 15 15 5 ">Cancel</Button>
             </StackPanel>
         </StackPanel> 
     </Grid>

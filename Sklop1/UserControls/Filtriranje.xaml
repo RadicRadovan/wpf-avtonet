@@ -15,12 +15,7 @@
             <RadioButton Margin="5" Click="ElectroEvent">Electro</RadioButton>
             <RadioButton Margin="5" x:Name="vsi" Click="VsiEvent">Vsi</RadioButton>
         </StackPanel>
-        <ComboBox  ItemsSource="{Binding Path=Znamke}"
-                   SelectedValue="{Binding Path=IzbraneZnamke}"
-                   SelectionChanged="Znamke_OnSelectionChanged"
-                   Text="Znamke">
-        </ComboBox>
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
                 <CheckBox x:Name="CheckBoxLimuzina" Click="Limuzina_OnClick">Limuzina</CheckBox>
                 <CheckBox x:Name="CheckBoxKaravan"  Click="Karavan_OnChecked">Karavan</CheckBox>
                 <CheckBox x:Name="CheckBoxSUV"  Click="Suv_OnChecked">SUV</CheckBox>
