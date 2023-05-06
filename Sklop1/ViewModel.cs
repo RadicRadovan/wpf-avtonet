@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace Sklop1
         public static ViewModel instance = null;
         public ObservableCollection<Oglas> oglasi;
         public StringCollection znamke;
+        public List<String> vsiPogoni = new List<String> { "bencin", "disel", "hibrid","electro"};
+        public List<String> vsiTipi = new List<string>() { "limuzina", "karavan", "suv" };
 
         public static ViewModel getInstance()
         {
@@ -55,6 +58,16 @@ namespace Sklop1
 
         private Oglas izbran;
 
+        public List<String> VsiPogoni
+        {
+            get { return vsiPogoni; }
+        }
+        
+        public List<String> VsiTipi
+        {
+            get { return vsiTipi; }
+        }
+        
         public StringCollection Znamke
         {
             get { return znamke; }
@@ -71,6 +84,9 @@ namespace Sklop1
                     {
                         NazivDodan = Izbran.NazivAvta;
                         ZnamkaDodana = Izbran.Znamka;
+                        TipDodan = Izbran.TipAvta;
+                        PogonDodan = Izbran.Pogon;
+                        KategorijaDodana = Izbran.Kategorija;
                     }
                     OnPropertyChange(nameof(izbran));
                 }
@@ -79,7 +95,59 @@ namespace Sklop1
 
         private String nazivDodan;
         private String znamka;
-
+        private String slikaDodana;
+        private String tipDodan;
+        private String pogonDodan;
+        private String kategorijaDodana;
+        
+        public String TipDodan
+        {
+            get { return tipDodan; }
+            set
+            {
+                if (tipDodan != value)
+                {
+                    tipDodan = value;
+                    OnPropertyChange(nameof(tipDodan));
+                }
+            }
+        }
+        public String SlikaDodana
+        {
+            get { return slikaDodana; }
+            set
+            {
+                if (slikaDodana != value)
+                {
+                    slikaDodana = value;
+                    OnPropertyChange(nameof(slikaDodana));
+                }
+            }
+        }
+        public String PogonDodan
+        {
+            get { return pogonDodan; }
+            set
+            {
+                if (pogonDodan != value)
+                {
+                    pogonDodan = value;
+                    OnPropertyChange(nameof(pogonDodan));
+                }
+            }
+        }
+        public String KategorijaDodana
+        {
+            get { return kategorijaDodana; }
+            set
+            {
+                if (kategorijaDodana != value)
+                {
+                    kategorijaDodana = value;
+                    OnPropertyChange(nameof(kategorijaDodana));
+                }
+            }
+        }
         public String NazivDodan
         {
             get { return nazivDodan; }
@@ -142,15 +210,32 @@ namespace Sklop1
                 return;
             }
 
-            if ( NazivDodan == null || ZnamkaDodana == null)
+            if (Izbran.NazivAvta != NazivDodan)
             {
-                MessageBox.Show("Vnesi podatke: {0}, {1}" + NazivDodan, ZnamkaDodana);
-                return;
+                Izbran.NazivAvta = NazivDodan;
             }
-            Izbran.NazivAvta = NazivDodan;
-            Izbran.Znamka = ZnamkaDodana;
-            OnPropertyChange(nameof(Oglasi));
+            if (Izbran.Znamka != ZnamkaDodana)
+            {
+                Izbran.Znamka = ZnamkaDodana;
+            }
+            if (Izbran.TipAvta != TipDodan)
+            {
+                Izbran.TipAvta = TipDodan;
+            }
+            if (Izbran.Pogon != PogonDodan)
+            {
+                Izbran.Pogon = PogonDodan;
+            }
+            if (Izbran.Kategorija != KategorijaDodana)
+            {
+                Izbran.Kategorija = KategorijaDodana;
+            }
+            if (Izbran.Slika != SlikaDodana && SlikaDodana != null)
+            {
+                Izbran.Slika = SlikaDodana;
+            }
             OnPropertyChange(nameof(Izbran));
+            OnPropertyChange(nameof(Oglasi));
         }
     }
 

@@ -38,7 +38,12 @@ namespace Sklop1
             };
             var vm = this.DataContext as ViewModel;
             openFileDialog.ShowDialog();
-            vm.Izbran.Slika = openFileDialog.FileName;
+            vm.SlikaDodana = openFileDialog.FileName;
+        }
+
+        private void cancel(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

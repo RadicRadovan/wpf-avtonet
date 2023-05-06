@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:Sklop1"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="AddWindow" Height="300" Width="300">
+        Title="AddWindow" Height="400" Width="300">
     <Grid>
         <StackPanel HorizontalAlignment="Center">
             <Label>Naziv</Label>
-            <TextBox Text="{Binding Path=Izbran.NazivAvta}" Width="250"></TextBox>
+            <TextBox Text="{Binding Path=Izbran.NazivAvta}" Width="250"/>
             <Label>Znamka</Label>
             <ComboBox
                 ItemsSource="{Binding Path=Znamke}"
@@ -19,6 +19,20 @@
             </ComboBox> 
             <Label>Slika</Label>
             <TextBlock  Text="{Binding Path=Izbran.Slika}"/>
+            <Label>Pogon</Label>
+            <ComboBox
+                ItemsSource="{Binding Path=VsiPogoni}"
+                SelectedValue="{Binding Path=Izbran.Pogon}"
+                Width="250" HorizontalAlignment="Left">
+            </ComboBox> 
+            <Label>Tip</Label>
+            <ComboBox
+                ItemsSource="{Binding Path=VsiTipi}"
+                SelectedValue="{Binding Path=Izbran.TipAvta}"
+                Width="250" HorizontalAlignment="Left">
+            </ComboBox> 
+            <Label>Kategorija</Label>
+            <TextBox Text="{Binding Path=Izbran.Kategorija}" Width="250"/>
             <Button Click="addImage" Width="150" Margin="5 15 15 5 ">Izberi sliko</Button>
             <Button Click="dodaj" Width="150" Margin="5 15 15 5 ">Add</Button>
         </StackPanel>

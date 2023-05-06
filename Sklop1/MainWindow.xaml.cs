@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Xml.Serialization;
 using Microsoft.Win32;
@@ -20,7 +21,7 @@ namespace Sklop1
             ViewModel vm = ViewModel.getInstance();
             this.DataContext = vm;
             vm.oglasi.Add(new Oglas("Tamic oglas", "TAM", "bencin", "limuzina"));
-            vm.oglasi.Add(new Oglas("Lada niva", "LADA",  "disel","SUV"));
+            vm.oglasi.Add(new Oglas("Lada niva", "LADA",  "disel","suv"));
             vm.oglasi.Add(new Oglas("Yugo 45", "Zastava","electro", "karavan" ));
             LV1.MouseDoubleClick += new MouseButtonEventHandler(PrikaziItem);
             LV1.Items.Refresh();
@@ -101,12 +102,8 @@ namespace Sklop1
                     catch (Exception exception)
                     {
                         MessageBox.Show("PODATKI NISO KOMPATIBILNI: " + exception.Message);
-                    }
-                    finally
-                    {
                         vm.Oglasi = new ObservableCollection<Oglas>();
                     }
-
                 }
             }
         }

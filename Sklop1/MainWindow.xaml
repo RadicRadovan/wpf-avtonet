@@ -100,8 +100,11 @@
                                         </Style>
                                     </Image.Style>
                                 </Image>
-                                <Label Content="{Binding NazivAvta}" Margin="5 5 5 5 "></Label>
-                                <TextBlock Text="{Binding Znamka}" Margin="5 12 5 5 "></TextBlock>
+                                <Label Content="{Binding NazivAvta}" Margin="5 5 5 5 "/>
+                                <TextBlock Text="{Binding Znamka}" Margin="5 12 5 5 "/>
+                                <Label Content="{Binding Pogon}" Margin="5 5 5 5"/>
+                                <Label Content="{Binding Kategorija}" Margin="5 5 5 5"/>
+                                <Label Content="{Binding TipAvta}" Margin="5 5 5 5"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
