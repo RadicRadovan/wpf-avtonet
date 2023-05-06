@@ -67,6 +67,12 @@
     <Compile Include="UpdateWindow.xaml.cs">
       <DependentUpon>UpdateWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Filtriranje.xaml.cs">
+      <DependentUpon>Filtriranje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Iskanje.xaml.cs">
+      <DependentUpon>Iskanje.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel.cs" />
     <Compile Include="ViewModelOkna.cs" />
     <Page Include="AddWindow.xaml" />
@@ -85,6 +91,8 @@
     </Compile>
     <Page Include="SettingsWindow.xaml" />
     <Page Include="UpdateWindow.xaml" />
+    <Page Include="UserControls\Filtriranje.xaml" />
+    <Page Include="UserControls\Iskanje.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

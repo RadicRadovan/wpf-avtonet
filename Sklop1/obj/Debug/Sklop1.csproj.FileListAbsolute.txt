@@ -20,3 +20,8 @@ D:\Sklop1\Sklop1\Sklop1\obj\Debug\AddWindow.baml
 D:\Sklop1\Sklop1\Sklop1\obj\Debug\SettingsWindow.baml
 D:\Sklop1\Sklop1\Sklop1\obj\Debug\UpdateWindow.g.cs
 D:\Sklop1\Sklop1\Sklop1\obj\Debug\UpdateWindow.baml
+D:\Sklop1\Sklop1\Sklop1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Sklop1\Sklop1\Sklop1\obj\Debug\UserControls\Filtriranje.g.cs
+D:\Sklop1\Sklop1\Sklop1\obj\Debug\UserControls\Iskanje.g.cs
+D:\Sklop1\Sklop1\Sklop1\obj\Debug\UserControls\Filtriranje.baml
+D:\Sklop1\Sklop1\Sklop1\obj\Debug\UserControls\Iskanje.baml

@@ -5,25 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36002821-f083-4c92-8250-3c5facd00ac4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Sklop1/UserControls/Filtriranje.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sklop1/UserControls/Filtriranje.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sklop1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sklop1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Sklop1/FileContentIndex/54695bcf-3d19-4469-ae28-369ffb72c2ac.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Sklop1/FileContentIndex/7cb98551-5979-46c9-b78e-bc47b1dfeab1.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Sklop1/FileContentIndex/d0b9c2cd-949e-428f-b1b0-cd187e00aa84.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Sklop1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Sklop1/v17/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/MainWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/Oglas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/Oglas.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/Sklop1.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/Sklop1.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sklop1/ViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/ViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/bin/Debug/Sklop1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/bin/Debug/Sklop1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/bin/Debug/Sklop1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/bin/Debug/Sklop1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1_Content.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1_Content.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1_MarkupCompile.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1_MarkupCompile.i.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sklop1/obj/Debug/Sklop1_MarkupCompile.lref" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +32,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5980a88ae5314d4b9811fcde1734d236568bc0/42/3880fd46/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5980a88ae5314d4b9811fcde1734d236568bc0/8f/4ec16ae1/StreamWriter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/908f8bca7f3649909af9c6824762362b364758/b3/8365a2de/SettingsPropertyValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a00f19c6eecf4367bcab09a5642db9e5381f90/85/96504641/UIElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a00f19c6eecf4367bcab09a5642db9e5381f90/dd/191c8b78/EventRoute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a00f19c6eecf4367bcab09a5642db9e5381f90/f8/4e096e0e/RoutedEventArgs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b44a57602e32413eb387699eac931482600790/85/c1feca48/CollectionView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b44a57602e32413eb387699eac931482600790/c2/c026bbcb/ListCollectionView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Sklop1/obj/Debug/MainWindow.g.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,16 +51,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.50076336&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.60714287",
+    "settings.editor.selected.configurable": "project.propDebugger",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Sklop1" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -92,7 +98,8 @@
       <workItem from="1682542422681" duration="1579000" />
       <workItem from="1682590792027" duration="1739000" />
       <workItem from="1682596044429" duration="437000" />
-      <workItem from="1682596533452" duration="7937000" />
+      <workItem from="1682596533452" duration="9269000" />
+      <workItem from="1683306055154" duration="13074000" />
     </task>
     <servers />
   </component>
@@ -116,36 +123,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Sklop1/MainWindow.xaml.cs</url>
-          <line>92</line>
-          <properties documentPath="D:\Sklop1\Sklop1\Sklop1\MainWindow.xaml.cs" initialLine="90" containingFunctionPresentation="method 'Uvozi'">
-            <startOffsets>
-              <option value="3195" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3281" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Sklop1/MainWindow.xaml.cs</url>
-          <line>95</line>
-          <properties documentPath="D:\Sklop1\Sklop1\Sklop1\MainWindow.xaml.cs" initialLine="93" containingFunctionPresentation="method 'Uvozi'">
-            <startOffsets>
-              <option value="3380" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3399" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Sklop1.SettingsWindow" memberName="Znamke" />

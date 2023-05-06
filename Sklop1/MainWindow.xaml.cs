@@ -19,9 +19,9 @@ namespace Sklop1
             InitializeComponent();
             ViewModel vm = ViewModel.getInstance();
             this.DataContext = vm;
-            // vm.oglasi.Add(new Oglas("Tamic oglas", "TAM", "limuzina"));
-            // vm.oglasi.Add(new Oglas("Lada niva", "LADA","limuzina"));
-            // vm.oglasi.Add(new Oglas("Yugo 45", "Zastava","karavan"));
+            vm.oglasi.Add(new Oglas("Tamic oglas", "TAM", "bencin", "limuzina"));
+            vm.oglasi.Add(new Oglas("Lada niva", "LADA",  "disel","SUV"));
+            vm.oglasi.Add(new Oglas("Yugo 45", "Zastava","electro", "karavan" ));
             LV1.MouseDoubleClick += new MouseButtonEventHandler(PrikaziItem);
             LV1.Items.Refresh();
         }

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sklop1"
+        xmlns:uc="clr-namespace:Sklop1.UserControls"
         mc:Ignorable="d"
         Title="MainWindow"
         MinWidth="830"
@@ -44,30 +45,12 @@
                     CornerRadius="5"
                     Margin="50 22 0 10"
                     Height="40">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBox Margin="10 10 0 10" Width="500">Search</TextBox>
-                        <Image Margin="10 10 10 10" Height="20" Width="20" Source="/search.png" />
-                    </StackPanel>
+                    <uc:Iskanje></uc:Iskanje>
                 </Border>
                 <Button Width="50" Height="40" Margin="10 10 0 0">ISCI</Button>
             </StackPanel>
             <StackPanel DockPanel.Dock="Left" Orientation="Vertical" Width="178" Height="300">
-                <StackPanel Orientation="Vertical">
-                    <RadioButton>Avto</RadioButton>
-                    <RadioButton>Motor</RadioButton>
-                    <RadioButton>Tovornjak</RadioButton>
-                </StackPanel>
-                <ComboBox>
-                    <ComboBoxItem>Limuzina</ComboBoxItem>
-                    <ComboBoxItem>Karavan</ComboBoxItem>
-                    <ComboBoxItem>SUV</ComboBoxItem>
-                </ComboBox>
-                <CheckBox>Bencin</CheckBox>
-                <CheckBox>Disel</CheckBox>
-                <CheckBox>Hibrid</CheckBox>
-                <CheckBox>Electro</CheckBox>
-                <Button>Refresh</Button>
-                <Label>Trenutno izbran:</Label>
+              <uc:Filtriranje></uc:Filtriranje>
                 <Label x:Name="izbran" Content="{Binding Path=Izbran.NazivAvta}"></Label>
             </StackPanel>
             <Grid>
