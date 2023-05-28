@@ -89,6 +89,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Resources\Styles.xaml" />
     <Page Include="SettingsWindow.xaml" />
     <Page Include="UpdateWindow.xaml" />
     <Page Include="UserControls\Filtriranje.xaml" />

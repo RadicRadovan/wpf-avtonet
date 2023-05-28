@@ -6,35 +6,42 @@
         xmlns:local="clr-namespace:Sklop1"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="AddWindow" Height="400" Width="300">
+        Title="AddWindow" Height="450" Width="300">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <StackPanel HorizontalAlignment="Center">
-            <Label>Naziv</Label>
-            <TextBox Text="{Binding Path=Izbran.NazivAvta}" Width="250"/>
-            <Label>Znamka</Label>
+            <Label Style="{StaticResource Subtitle}">Naziv</Label>
+            <TextBox Style="{StaticResource TextBox}" Text="{Binding Path=Izbran.NazivAvta}" Width="250"/>
+            <Label Style="{StaticResource Subtitle}">Znamka</Label>
             <ComboBox
                 ItemsSource="{Binding Path=Znamke}"
                 SelectedValue="{Binding Path=Izbran.Znamka}"
                Width="250" HorizontalAlignment="Left">
             </ComboBox> 
-            <Label>Slika</Label>
+            <Label Style="{StaticResource Subtitle}">Slika</Label>
             <TextBlock  Text="{Binding Path=Izbran.Slika}"/>
-            <Label>Pogon</Label>
+            <Label Style="{StaticResource Subtitle}">Pogon</Label>
             <ComboBox
                 ItemsSource="{Binding Path=VsiPogoni}"
                 SelectedValue="{Binding Path=Izbran.Pogon}"
                 Width="250" HorizontalAlignment="Left">
             </ComboBox> 
-            <Label>Tip</Label>
+            <Label Style="{StaticResource Subtitle}">Tip</Label>
             <ComboBox
                 ItemsSource="{Binding Path=VsiTipi}"
                 SelectedValue="{Binding Path=Izbran.TipAvta}"
                 Width="250" HorizontalAlignment="Left">
             </ComboBox> 
-            <Label>Kategorija</Label>
-            <TextBox Text="{Binding Path=Izbran.Kategorija}" Width="250"/>
-            <Button Click="addImage" Width="150" Margin="5 15 15 5 ">Izberi sliko</Button>
-            <Button Click="dodaj" Width="150" Margin="5 15 15 5 ">Add</Button>
+            <Label Style="{StaticResource Subtitle}">Kategorija</Label>
+            <TextBox Style="{StaticResource TextBox}" Text="{Binding Path=Izbran.Kategorija}" Width="250"/>
+            <Button Style="{StaticResource ButtonNeutral}" Click="addImage" Width="150" Margin="5 15 15 5 ">Izberi sliko</Button>
+            <Button Style="{StaticResource ButtonAccept}" Click="dodaj" Width="150" Margin="5 15 15 5 ">Add</Button>
         </StackPanel>
     </Grid>
 </Window>

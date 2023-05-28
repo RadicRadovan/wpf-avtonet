@@ -7,34 +7,91 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Title="SettingsWindow" Height="250" Width="400">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="91*"/>
-            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="91*" />
+            <ColumnDefinition Width="109*" />
         </Grid.ColumnDefinitions>
         <TabControl Grid.ColumnSpan="2">
             <TabItem Header="Znamke">
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Width="190">
-                        <Label>Naziv Znamke</Label>
-                        <TextBox Text="{Binding Path=NovaZnamka}"  Margin="2,10,2,0"/>
-                        <!-- <Button Command="{Binding Path=DodajZnamko}" Margin="2,10,2,0">Add</Button> -->
-                        <Button Click="DodajClikck" Margin="2,10,2,0">Add</Button>
-                        <Button Click="UpdateClick" Margin="2,10,2,0">Update</Button>
+                        <Label Style="{StaticResource Subtitle}">Naziv Znamke</Label>
+                        <TextBox Style="{StaticResource TextBox}" Text="{Binding Path=NovaZnamka}" Margin="2,10,2,0" />
+                        <Button Style="{StaticResource ButtonAccept}" Click="DodajClikck" Margin="2,10,2,0">Add</Button>
+                        <Button Style="{StaticResource ButtonAccept}" Click="UpdateClick" Margin="2,10,2,0">Update</Button>
                     </StackPanel>
                     <StackPanel Width="190">
                         <ListView x:Name="Znamke"
+                                  Style="{StaticResource List}"
                                   Height="100"
                                   MaxHeight="100"
                                   SelectedItem="{Binding Path=SelectedZnamka}"
                                   SelectionMode="Single" Margin="2,0,2,0">
                         </ListView>
-                        <Label Margin="2,0,2,0">Selected:</Label>
-                        <Button Click="deleteClick" Margin="2,0,2,0">Delete</Button>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Style="{StaticResource Subtitle}">Selected:</Label>
+                            <Label Style="{StaticResource Subtitle}" Content="{Binding SelectedZnamka}" />
+                        </StackPanel>
+                        <Button Style="{StaticResource ButtonCancel}" Click="deleteClick">Delete</Button>
                     </StackPanel>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="Auto save" />
+            <TabItem Header="Auto save">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label Style="{StaticResource Subtitle}">Auto save</Label>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <RadioButton Margin="5" Click="setOn">ON</RadioButton>
+                        <RadioButton Margin="5" Click="setOff" IsChecked="{Binding IsChecked}">OFF</RadioButton>
+                    </StackPanel>
+                    <Label Style="{StaticResource Subtitle}">Timer (H,M,S)</Label>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox IsEnabled="{Binding IsChecked}" PreviewTextInput="NumberValidationTextBox" Width="30"
+                                 Margin="5" Style="{StaticResource TextBox}" Text="{Binding Path=Hours}" />
+                        <TextBox IsEnabled="{Binding IsChecked}" PreviewTextInput="NumberValidationTextBox" Width="30"
+                                 Margin="5" Style="{StaticResource TextBox}" Text="{Binding Path=Minutes}" />
+                        <TextBox IsEnabled="{Binding IsChecked}" PreviewTextInput="NumberValidationTextBox" Width="30"
+                                 Margin="5" Style="{StaticResource TextBox}" Text="{Binding Path=Secondes}" />
+                    </StackPanel>
+                        <Label Style="{StaticResource Subtitle}"  x:Name="Label">
+                            <Label.Triggers>
+                                <EventTrigger RoutedEvent="Label.Loaded">
+                                    <BeginStoryboard>
+                                            <Storyboard>
+                                                <StringAnimationUsingKeyFrames Storyboard.TargetProperty="(Label.Content)" Duration="00:00:00.8">
+                                                    <DiscreteStringKeyFrame Value="L" KeyTime="0:0:0.1" />
+                                                    <DiscreteStringKeyFrame Value="Lo" KeyTime="0:0:0.2" />
+                                                    <DiscreteStringKeyFrame Value="Loc" KeyTime="0:0:0.3" />
+                                                    <DiscreteStringKeyFrame Value="Loca" KeyTime="0:0:0.4" />
+                                                    <DiscreteStringKeyFrame Value="Locat" KeyTime="0:0:0.5" />
+                                                    <DiscreteStringKeyFrame Value="Locati" KeyTime="0:0:0.6" />
+                                                    <DiscreteStringKeyFrame Value="Locatio" KeyTime="0:0:0.7" />
+                                                    <DiscreteStringKeyFrame Value="Location" KeyTime="0:0:0.8" />
+                                                </StringAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                </EventTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <TextBlock Text="{Binding Path=FileName}"/>
+                    <Button Style="{StaticResource ButtonNeutral}" Click="addLocation">
+                        Add location
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard Storyboard="{StaticResource LinearnaAnimacija}">
+                            </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
+                    </Button>
+                </StackPanel>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

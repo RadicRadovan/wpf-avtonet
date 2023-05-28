@@ -10,12 +10,12 @@ namespace Sklop1
             InitializeComponent();
             this.DataContext = ViewModel.getInstance();
         }
-
         private void update(object sender, RoutedEventArgs e)
         {
             ViewModel vm = this.DataContext as ViewModel;
             vm.UpdateItem.Execute(true);
             this.Close();
+            App.IsUpdateWinOpen = false;
         }
         
         private void addImage(object sender, RoutedEventArgs e)
@@ -43,7 +43,8 @@ namespace Sklop1
 
         private void cancel(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            App.IsUpdateWinOpen = false;
+            Close();
         }
     }
 }

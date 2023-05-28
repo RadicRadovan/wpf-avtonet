@@ -32,5 +32,40 @@ namespace Sklop1.Properties {
                 this["Znamke"] = value;
             }
         }
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection Timer {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["Timer"]));
+            }
+            set {
+                this["Timer"] = value;
+            }
+        }
+
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string FileName {
+            get {
+                return ((string)(this["FileName"]));
+            }
+            set {
+                this["FileName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsEnable {
+            get {
+                return ((bool)(this["IsEnable"]));
+            }
+            set {
+                this["IsEnable"] = value;
+            }
+        }
     }
 }

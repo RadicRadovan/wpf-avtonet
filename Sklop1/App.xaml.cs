@@ -13,5 +13,6 @@ namespace Sklop1
     /// </summary>
     public partial class App : Application
     {
+        public static bool IsUpdateWinOpen { get; set; }
     }
 }

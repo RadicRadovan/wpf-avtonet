@@ -6,10 +6,17 @@
              xmlns:local="clr-namespace:Sklop1.UserControls"
              mc:Ignorable="d"
              d:DesignHeight="40" d:DesignWidth="550">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
         <StackPanel Orientation="Horizontal">
-            <TextBox TextChanged="OnTextChange" x:Name="iskanjeText" Margin="10 10 0 10" Width="500">Search</TextBox>
-            <Image Margin="10 10 10 10" Height="20" Width="20" Source="/search.png" />
+            <TextBox Style="{StaticResource TextBox}" TextChanged="OnTextChange" x:Name="iskanjeText" Margin="10 10 0 10" Width="500">Search</TextBox>
+            <Image Style="{StaticResource Icon}" Source="/search.png" />
         </StackPanel>
     </Grid>
 </UserControl>

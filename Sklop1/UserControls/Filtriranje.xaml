@@ -6,21 +6,28 @@
              xmlns:local="clr-namespace:Sklop1.UserControls"
              mc:Ignorable="d"
              d:DesignHeight="200" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
         <StackPanel>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-            <RadioButton Margin="5" Click="BencinEvent">Bencin</RadioButton>
-            <RadioButton Margin="5" Click="DiselEvent">Disel</RadioButton>
-            <RadioButton Margin="5" Click="HibridEvent">Hibrid</RadioButton>
-            <RadioButton Margin="5" Click="ElectroEvent">Electro</RadioButton>
-            <RadioButton Margin="5" x:Name="vsi" Click="VsiEvent">Vsi</RadioButton>
+            <RadioButton Style="{StaticResource RadioButtons}" Click="BencinEvent">Bencin</RadioButton>
+            <RadioButton Style="{StaticResource RadioButtons}" Click="DiselEvent">Disel</RadioButton>
+            <RadioButton Style="{StaticResource RadioButtons}" Click="HibridEvent">Hibrid</RadioButton>
+            <RadioButton Style="{StaticResource RadioButtons}" Click="ElectroEvent">Electro</RadioButton>
+            <RadioButton Style="{StaticResource RadioButtons}" x:Name="vsi" Click="VsiEvent">Vsi</RadioButton>
         </StackPanel>
             <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
-                <CheckBox x:Name="CheckBoxLimuzina" Click="Limuzina_OnClick">Limuzina</CheckBox>
-                <CheckBox x:Name="CheckBoxKaravan"  Click="Karavan_OnChecked">Karavan</CheckBox>
-                <CheckBox x:Name="CheckBoxSUV"  Click="Suv_OnChecked">SUV</CheckBox>
+                <CheckBox Style="{StaticResource CheckBox}" x:Name="CheckBoxLimuzina" Click="Limuzina_OnClick">Limuzina</CheckBox>
+                <CheckBox Style="{StaticResource CheckBox}" x:Name="CheckBoxKaravan"  Click="Karavan_OnChecked">Karavan</CheckBox>
+                <CheckBox Style="{StaticResource CheckBox}" x:Name="CheckBoxSUV"  Click="Suv_OnChecked">SUV</CheckBox>
             </StackPanel>
-            <Button Click="Refresh">Refresh</Button>
+            <Button Style="{StaticResource ButtonNeutral}" Click="Refresh">Refresh</Button>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -11,6 +11,13 @@
         MinHeight="500"
         Height="500"
         Width="830">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="69*" />
@@ -18,47 +25,60 @@
         </Grid.ColumnDefinitions>
         <DockPanel Margin="0,0,0,-36" Grid.ColumnSpan="2">
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
-                <Menu>
-                    <MenuItem Header="Orodja" Foreground="Black" FontSize="16">
-                        <MenuItem Header="Dodaj" Click="OdpriDodajOkno" />
-                        <MenuItem Header="Odstrani" Command="{Binding Path=DeleteItem}"></MenuItem>
-                        <MenuItem Header="Ured" Click="Update"></MenuItem>
-                        <!-- <MenuItem Header="Ured"  Command="{Binding Path=UpdateItem}"></MenuItem> -->
+                <Menu Style="{StaticResource Menu}">
+                    <MenuItem Style="{StaticResource MenuItem}"  Header="Orodja">
+                        <MenuItem Style="{StaticResource MenuItem}" Header="Dodaj" Click="OdpriDodajOkno" />
+                        <MenuItem Style="{StaticResource MenuItem}" Header="Odstrani" Command="{Binding Path=DeleteItem}"></MenuItem>
+                        <MenuItem Style="{StaticResource MenuItem}" Header="Uredi" Click="Update"></MenuItem>
                     </MenuItem>
-                    <MenuItem Header="Datoteka" Foreground="Black" FontSize="16">
-                        <MenuItem Header="Uvozi" Click="Uvozi"></MenuItem>
-                        <MenuItem Header="Izvozi" Click="Izvozi"></MenuItem>
-                        <MenuItem Header="Izhod" Click="Izhod"></MenuItem>
+                    <MenuItem Style="{StaticResource MenuItem}" Header="Datoteka" >
+                        <MenuItem Style="{StaticResource MenuItem}" Header="Uvozi" Click="Uvozi"></MenuItem>
+                        <MenuItem Style="{StaticResource MenuItem}" Header="Izvozi" Click="Izvozi"></MenuItem>
+                        <MenuItem Style="{StaticResource MenuItem}" Header="Izhod" Click="Izhod"></MenuItem>
                     </MenuItem>
-                    <MenuItem Header="Oglasi" Foreground="Black" FontSize="16">
-                        <MenuItem Header="Nastavitve" Click="openSettings"></MenuItem>
+                    <MenuItem Style="{StaticResource MenuItem}" Header="Oglasi">
+                        <MenuItem Style="{StaticResource MenuItem}" Header="Nastavitve" Click="openSettings"></MenuItem>
                     </MenuItem>
                 </Menu>
             </StackPanel>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Margin="0 0 0 5" Height="92">
-                <Image Margin="50 10 5 5" Height="60" Width="70" Source="/logo.png" RenderTransformOrigin="0.571,0.5" />
-                <Border
+               <StackPanel Margin="50 10 5 5">
+                <Canvas>
+                <Image x:Name="Logo" Style="{StaticResource Image}" Source="/logo.png" RenderTransformOrigin="0.571,0.5">
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="MouseEnter">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimationUsingPath Storyboard.TargetName="Logo" Source="X" Storyboard.TargetProperty="(Canvas.Left)" Duration="0:0:5" PathGeometry="{StaticResource GeometryAnimacija}" AutoReverse="True" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                </Image>
+                </Canvas>
+               </StackPanel>
+                    <Border
                     BorderBrush="Black"
                     BorderThickness="2"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     CornerRadius="5"
-                    Margin="50 22 0 10"
+                    Margin="120 22 0 10"
                     Height="40">
                     <uc:Iskanje></uc:Iskanje>
                 </Border>
-                <Button Width="50" Height="40" Margin="10 10 0 0">ISCI</Button>
+                <Button Style="{StaticResource ButtonNeutral}" Width="50" Height="40" Margin="10 10 0 0">ISCI</Button>
             </StackPanel>
             <StackPanel DockPanel.Dock="Left" Orientation="Vertical" Width="178" Height="300">
               <uc:Filtriranje></uc:Filtriranje>
-                <Label x:Name="izbran" Content="{Binding Path=Izbran.NazivAvta}"></Label>
+                <Label Style="{StaticResource Subtitle}" x:Name="izbran" Content="{Binding Path=Izbran.NazivAvta}"/>
             </StackPanel>
             <Grid>
                 <ListView x:Name="LV1"
+                          Style="{StaticResource List}"
                           ItemsSource="{Binding Oglasi}"
                           SelectedItem="{Binding Path=Izbran}"
-                          SelectionMode="Single"
-                          Margin="0,0,0,40">
+                          SelectionMode="Single">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <!-- <DataTemplate.Triggers> -->
@@ -76,12 +96,6 @@
                                                 <DataTrigger Value="True" Binding="{Binding HaveImage}">
                                                 <Setter Property="Source" Value="{Binding Slika}"/>
                                                 </DataTrigger>
-                                                <!-- <DataTrigger Value="False" Binding="{Binding HaveImage}"> -->
-                                                <!--     <Setter Property="Source" Value="/logo.png"/> -->
-                                                <!-- </DataTrigger> -->
-                                                <!-- <DataTrigger Value="False" Binding="{Binding HaveImage}"> -->
-                                                <!--     <Setter Property="Source" Value="/logo.png"/> -->
-                                                <!-- </DataTrigger> -->
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
                                                         <Condition Binding="{Binding Path=HaveImage}" Value="False" />
@@ -100,7 +114,14 @@
                                         </Style>
                                     </Image.Style>
                                 </Image>
-                                <Label Content="{Binding NazivAvta}" Margin="5 5 5 5 "/>
+                                <Label Content="{Binding NazivAvta}" Margin="5 5 5 5 ">
+                                    <Label.Triggers>
+                                        <EventTrigger RoutedEvent="MouseEnter">
+                                            <BeginStoryboard Storyboard="{StaticResource FontAnimacija}">
+                                            </BeginStoryboard>
+                                        </EventTrigger>
+                                    </Label.Triggers>
+                                </Label>
                                 <TextBlock Text="{Binding Znamka}" Margin="5 12 5 5 "/>
                                 <Label Content="{Binding Pogon}" Margin="5 5 5 5"/>
                                 <Label Content="{Binding Kategorija}" Margin="5 5 5 5"/>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Sklop1\Sklop1\Sklop1\obj\Debug\
+C:\Users\PC\Desktop\sklop\Sklop1\Sklop1\obj\Debug\
 Sklop1
 none
 false
 DEBUG;TRACE
-D:\Sklop1\Sklop1\Sklop1\App.xaml
-61611182274
+C:\Users\PC\Desktop\sklop\Sklop1\Sklop1\App.xaml
+7577946064
 
 141963218005
 15885352037
-AddWindow.xaml;MainWindow.xaml;SettingsWindow.xaml;UpdateWindow.xaml;UserControls\Filtriranje.xaml;UserControls\Iskanje.xaml;
+AddWindow.xaml;MainWindow.xaml;Resources\Styles.xaml;SettingsWindow.xaml;UpdateWindow.xaml;UserControls\Filtriranje.xaml;UserControls\Iskanje.xaml;
 
 False
 

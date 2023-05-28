@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Data;
 using System.Windows.Input;
 using System.Xml.Serialization;
 using Microsoft.Win32;
@@ -38,6 +36,10 @@ namespace Sklop1
 
         private void Update(Object sender, RoutedEventArgs routedEventArgs)
         {
+            if (App.IsUpdateWinOpen)
+            {
+                return;
+            }
             UpdateWindow updateWindow = new UpdateWindow();
             var vm = this.DataContext as ViewModel;
             if(vm.Izbran == null)
@@ -46,6 +48,7 @@ namespace Sklop1
                 return;
             }
             updateWindow.Show();
+            App.IsUpdateWinOpen = true;
         }
 
         private void Izhod(object sender, RoutedEventArgs e)
@@ -75,7 +78,7 @@ namespace Sklop1
                 CheckPathExists = true,
 
                 DefaultExt = ".xml",
-                Filter ="Images (*.xml," + "All files (*.*)|*.*",
+                Filter ="XML file (*.xml)|*.xml",
                 FilterIndex = 2,
                 RestoreDirectory = true,
 
